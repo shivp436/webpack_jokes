@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// comment out BundleAnalyzerPlugin while deploying to production, as it doesn't end after running
 
 module.exports = {
 	mode: 'development',
@@ -63,6 +64,6 @@ module.exports = {
       filename: 'about.html', // Output file in ./dist
       template: path.resolve(__dirname, 'src/about.html'), // Source template file
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ]
 };
